@@ -24,7 +24,7 @@
                     <nav>
                         <ul class="flex">
                             <li>
-                                <a href="#">
+                                <a href="https://github.com/konstantine999">
                                     Github
                                 </a>
                             </li>
@@ -72,19 +72,52 @@
                     const country = document.createElement('h2')
                     const h1 = document.createElement('h1')
 
+                    const bottomWrapper = document.createElement('div')
+                    const firstRow = document.createElement('div')
+                    const secondRow = document.createElement('div')
+
+                    const visibWrapper = document.createElement('div')
+                    const feelsLikeWrapper = document.createElement('div')
+                    const humidityWrapper = document.createElement('div')
+                    const windWrapper = document.createElement('div')
+
+                    const visib = document.createElement('p')
+                    const feelsLike = document.createElement('p')
+                    const humidity = document.createElement('p')
+                    const wind = document.createElement('p')
+
                     h1.textContent = Math.round(data.main.temp - 273.15)
                     cloud.textContent = data.weather[0].main
                     country.textContent = `${data.name}, ${data.sys.country}`
-
+                    visib.textContent = ` Visibility ${Math.round(data.visibility / 1000)} KM`
+                    feelsLike.textContent = ` Feels Like ${Math.round(data.main.feels_like - 273.15)} C`
+                    humidity.textContent = ` Humidity ${data.main.humidity}%`
+                    wind.textContent = ` Wind ${data.wind.speed} KM`
 
                     h1.classList.add('title')
                     topContent.classList.add('box-top-content')
                     cloudWrapper.classList.add('box-cloud-wrapper')
                     celsiusWrapper.classList.add('celsius-wrapper')
+                    firstRow.classList.add('first-row')
+                    secondRow.classList.add('second-row')
+                    visibWrapper.classList.add('visib-wrapper')
+                    feelsLikeWrapper.classList.add('feels-wrapper')
+                    humidityWrapper.classList.add('humidity-wrapper')
+                    windWrapper.classList.add('wind-wrapper')
+                    bottomWrapper.classList.add('bottom-wrapper')
 
                     const img = document.createElement('img')
                     img.setAttribute('src', `http://openweathermap.org/img/w/${data.weather[0].icon}.png`)
                     img.classList.add('weather-icon')
+
+                    const visibLogo = document.createElement('img')
+                    visibLogo.setAttribute('src', './photos/eye.png')
+                    const temperatureLogo = document.createElement('img')
+                    temperatureLogo.setAttribute('src', './photos/temperature.png')
+                    const humidityLogo = document.createElement('img')
+                    humidityLogo.setAttribute('src', './photos/humidity.png')
+                    const windLogo = document.createElement('img')
+                    windLogo.setAttribute('src', './photos/wind.png')
 
                     weatherBox.appendChild(topContent)
                     cloudWrapper.appendChild(img)
@@ -93,6 +126,23 @@
                     weatherBox.appendChild(celsiusWrapper)
                     celsiusWrapper.appendChild(h1)
                     celsiusWrapper.appendChild(cloud)
+                    weatherBox.appendChild(bottomWrapper)
+                    bottomWrapper.appendChild(firstRow)
+                    bottomWrapper.appendChild(secondRow)
+                    firstRow.appendChild(visibWrapper)
+                    secondRow.appendChild(feelsLikeWrapper)
+                    firstRow.appendChild(humidityWrapper)
+                    secondRow.appendChild(windWrapper)
+
+                    visibWrapper.appendChild(visibLogo)
+                    feelsLikeWrapper.appendChild(temperatureLogo)
+                    humidityWrapper.appendChild(humidityLogo)
+                    windWrapper.appendChild(windLogo)
+
+                    visibWrapper.appendChild(visib)
+                    feelsLikeWrapper.appendChild(feelsLike)
+                    humidityWrapper.appendChild(humidity)
+                    windWrapper.appendChild(wind)
                 }
 
 

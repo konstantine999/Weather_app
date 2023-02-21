@@ -60,13 +60,13 @@ ul a {
 .middle-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 7.5%;
+    margin-top: 3.5%;
 }
 .weather-box, .weather-box-empty {
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(16px);
     border-radius: 48px;
-    height: 575px;
+    min-height: 575px;
     max-width: 450px;
     width: 100%;
 }
@@ -98,7 +98,7 @@ ul a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 75px;
+    margin-top: 30px;
     position: relative;
 }
 .celsius-wrapper h1 {
@@ -115,7 +115,57 @@ ul a {
     color: #FFFFFF;
     font-size: 18px;
 }
-
+.first-row p, .second-row p {
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.first-row, .second-row {
+    gap: 30px;
+}
+.first-row img, .second-row img {
+    width: 20px;
+    height: 16px;
+}
+.feels-wrapper img {
+    height: 22px;
+    width: 13px;
+}
+.first-row div, .second-row div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.bottom-wrapper {
+    width: 100%;
+    display: flex;
+    margin-top: 69px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 30px;
+}
+.visib-wrapper, .humidity-wrapper {
+    position: relative;
+}
+.visib-wrapper::after {
+    content: "";
+    width: 2px;
+    height: 15px;
+    background-color: white;
+    position: absolute;
+    left: 163px;
+}
+.humidity-wrapper, .wind-wrapper {
+    margin-top: 25px;
+}
+.humidity-wrapper::after {
+    content: "";
+    width: 2px;
+    height: 15px;
+    background-color: white;
+    position: absolute;
+    left: 163px;
+}
 @media (max-width:1024px) {
     .middle-wrapper {
         flex-direction: column;
