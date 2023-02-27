@@ -9,42 +9,51 @@
     <title>Weather</title>
 </head>
 <body>
-    <div class="container">
+    <div class="background">
         <header>
-            <div class="header-wrapper flex">
-                <div class="header-left-side flex">
-                    <div class="cloud-wrapper">
-                        <a href="">
-                            <img src="./photos/PartlyCloudy.png" alt="Cloud">
-                        </a>
+            <div class="container">
+                <div class="header-wrapper flex">
+                    <div class="header-left-side flex">
+                        <div class="cloud-wrapper">
+                            <a href="">
+                                <img src="./photos/PartlyCloudy.png" alt="Cloud">
+                            </a>
+                        </div>
+                        <h1>Weather By Vicbox</h1>
                     </div>
-                    <h1>Weather By Vicbox</h1>
-                </div>
-                <div class="header-right-side">
-                    <nav>
-                        <ul class="flex">
-                            <li>
-                                <a href="https://github.com/konstantine999">
-                                    Github
-                                </a>
-                            </li>
-                            <li class="about">
-                                <a href="#">
-                                   About 
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <div class="header-right-side">
+                        <nav>
+                            <ul class="flex">
+                                <li>
+                                    <a href="https://github.com/konstantine999">
+                                        Github
+                                    </a>
+                                </li>
+                                <li class="about">
+                                    <a href="#">
+                                    About 
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </header>
         <section>
-            <div class="middle-wrapper">
-                <div class="weather-box" id="weatherBox">
-                    
-                </div>
-                <div class="weather-box-empty">
-
+            <div class="container">
+                <div class="middle-wrapper">
+                    <div class="weather-box" id="weatherBox">
+                        
+                    </div>
+                    <div class="weather-box-empty flex">
+                        <div class="location-button-wrapper flex">
+                            <img src="./photos/plus-icon.png" alt="Location button">
+                        </div>
+                        <p>
+                            Add new location
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
